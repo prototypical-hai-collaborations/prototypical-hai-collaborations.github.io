@@ -1,1 +1,252 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Prototypical Human-AI Collaboration Behaviors from LLM-Assisted Writing in the Wild">
+  <meta name="keywords" content="LLMs, Human-AI Interaction, Writing Assistance">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prototypical Human-AI Collaboration Behaviors from LLM-Assisted Writing in the Wild</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Prototypical Human-AI Collaboration Behaviors from LLM-Assisted Writing in the Wild</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://msheshera.github.io/">Sheshera Mysore</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://debaratidas94.github.io/">Debarati Das</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://hanchengcao.me/">Hancheng Cao</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.microsoft.com/en-us/research/people/basarraf/">Bahar Sarrafzadeh</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Office of Applied Research, Microsoft</span><br>
+            <span class="author-block"><sup>2</sup>University of Minnesota</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2505.16023"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2505.16023"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            <!-- Code Link. -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/microsoft/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/microsoft/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              <!-- Bluesky thread Link. -->
+              <span class="link-block">
+                <a href="https://bsky.app/profile/msheshera.bsky.social"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <img src="static/images/Bluesky_Logo.svg" style="height: 1em; filter: brightness(0) invert(1);">
+                  </span>
+                  <span>Thread</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <!-- Teaser image -->
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <img src="static/images/teaser.png" alt="Teaser" style="width: 75%;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Blog post. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            What does it mean to <i>collaborate</i> with LLM-powered Copilots? A common metaphor is to think of LLMs as “assistants” – users supply a prompt specifying their task, the LLM responds, and users leave with the response in hand. Instead, we shifted our metaphor to LLMs as “collaborators” and asked what it means to collaborate with LLM Copilots. We answered this by analyzing English multi-turn sessions from 21 million Microsoft Bing Copilot and public log datasets, which capture user-LLM interactions.
+          </p>
+        </div>
+
+        <h2 class="title is-3">What we did</h2>
+        <div class="content has-text-justified">
+          <!-- Analysis image -->
+          <div class="columns is-centered">
+            <div class="column">
+              <div class="content has-text-centered">
+                <img src="static/images/analysis.png" alt="An overview of our analysis procedure used to answer the two research questions we explore." style="width: 50%;">
+                <figcaption style="color: #999; font-size: 0.9em; margin-top: 0.3em;">Overview of the analysis methods used to address our two research questions.</figcaption>
+              </div>
+            </div>
+          </div>
+          <p>
+            Recent papers have taken the “assistant” metaphor and examined the tasks users engage in with Copilots such as <a href="https://www.anthropic.com/research/clio">Claude</a>, <a href="https://arxiv.org/abs/2404.04268">Bing Copilot</a>, and <a href="https://arxiv.org/abs/2405.01470">WildChat</a> (coding, search, writing, etc). Instead, we take the LLMs as a “collaborator” metaphor and analyze users' <i>follow-ups</i> after making an initial request because they capture how users collaborate with the LLM. We ran our analysis only on writing tasks to keep the analysis manageable.
+          </p>
+
+          <p>
+            We asked two questions in our analysis: (Q1) What user behaviors emerge in user-LLM collaborations? (Q2) Do users collaborate differently depending on their writing intent, e.g., do users collaborate differently if they are writing an email vs writing a story?
+          </p>
+
+          <p>
+          We addressed the first question by clustering users’ follow-ups and identified a small set of clusters that represent prototypical human-AI collaboration behaviors. We’ll refer to them as PATHs. Then, we ran a regression analysis between writing intents and PATHs to answer our second question.
+          </p>
+        </div>
+
+        <h2 class="title is-3">What we found</h2>
+        <div class="content has-text-justified">
+          <p>
+            We found that eight PATHs explained 80-85% of the variance in our large-scale log datasets. These PATHs corresponded to users asking questions, requesting more responses, and adding large chunks of text to the response, among others. Our paper describes the complete set of PATHs. 
+          </p>
+
+          <p>
+            Most interestingly, we found a strong correlation between specific writing intents and PATHs. For example, users frequently asked for more responses when they were brainstorming. Similarly, they asked questions as they wrote technical or professional documents – showing how users brought together tasks that researchers historically treated as separate from one another (search and writing). When users wrote texts that they wanted to personalize, they added large chunks of text to it – for example, a story they wanted creative control over or a personal speech. Our paper describes several such correlations and highlights under-explored research problems that warrant further exploration in future work.
+          </p>
+        </div>
+        <!-- Examples image -->
+        <div class="columns is-centered">
+          <div class="column">
+            <div class="content has-text-centered">
+              <img src="static/images/examples.png" alt="Example conversations illustrating different collaboration behaviors based on writing intent." style="width: 70%;">
+              <figcaption style="color: #999; font-size: 0.9em; margin-top: 0.3em;">Example conversations illustrating different collaboration behaviors based on writing intent.</figcaption>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="title is-3">What this means for LLM alignment</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our results have implications for session-level LLM alignment and alignment under uncertain or evolving feedback, but we'll highlight a single key implication here – LLMs as "thought partners."
+          </p>
+
+          <p>
+            In asking questions, seeking feedback, and brainstorming with LLMs, users treated LLMs as partners in longer-term learning. Aligning LLMs for long-term learning represents a compelling opportunity, and we echo <a href="https://www.nature.com/articles/s41562-024-01991-9">recent calls</a> to develop LLMs as thought partners. This goal will require that alignment research prevents the homogenization of human <a href="https://arxiv.org/abs/2501.17247">voices</a> and <a href="https://arxiv.org/abs/2501.17247">ideas</a> and incorporates some of the <a href="https://link.springer.com/article/10.1007/s00146-025-02323-9">desirable difficulties</a> known to be crucial for learning.
+          </p>
+
+          <p>
+            Our paper discusses all the details and cites several recent papers in line with our findings and implications. Please take a look!
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section" id="Contact">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Contact</h2>
+    Please contact <a href="mailto:smysore@iesl.cs.umass.edu">smysore@iesl.cs.umass.edu</a> and <a href="mailto:bahar.sarrafzadeh@microsoft.com">bahar.sarrafzadeh@microsoft.com</a> with questions, suggestions, and ideas. Or get in touch on our social media threads of the paper on: <a href="https://bsky.app/">Bluesky</a>, <a href="https://www.linkedin.com/feed/">LinkedIn</a>, <a href="https://www.alphaxiv.org/abs/2505.16023">AlphaXiv</a>, or <a href="https://x.com/">X/Twitter</a>.
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+        @article{mysore2025paths,
+          title={Prototypical Human-AI Collaboration Behaviors from LLM-Assisted Writing in the Wild}, 
+          author={Sheshera Mysore and Debarati Das and Hancheng Cao and Bahareh Sarrafzadeh},
+          year={2025},
+          url={https://arxiv.org/abs/2505.16023}
+        }
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the footer of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
