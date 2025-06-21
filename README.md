@@ -1,4 +1,4 @@
-# Lost In Conversation
+# Prototypical Human-AI Collaboration Behaviors from LLM-Assisted Writing in the Wild
 
 This is the repository that contains source code for the [PATHs website](https://prototypical-hai-collaborations.github.io/), inspired by [Nerfies](https://github.com/nerfies/nerfies.github.io).
 
