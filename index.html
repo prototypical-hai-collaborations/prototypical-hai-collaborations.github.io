@@ -50,7 +50,7 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Office of Applied Research, Microsoft</span><br>
-            <span class="author-block"><sup>2</sup>University of Minnesota</span>
+            <span class="author-block"><sup>2</sup>University of Minnesota, Twin Cities</span>
           </div>
 
           <div class="column has-text-centered">
@@ -77,7 +77,7 @@
             <!-- Code Link. -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/microsoft/"
+                <a href="https://github.com/microsoft/prototypical-hai-collaborations"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -87,7 +87,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/datasets/microsoft/"
+                <a href="https://github.com/microsoft/prototypical-hai-collaborations/tree/main/data"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -134,32 +134,32 @@
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-            What does it mean to <i>collaborate</i> with LLM-powered Copilots? A common metaphor is to think of LLMs as “assistants” – users supply a prompt specifying their task, the LLM responds, and users leave with the response in hand. Instead, we shifted our metaphor to LLMs as “collaborators” and asked what it means to collaborate with LLM Copilots. We answered this by analyzing English multi-turn sessions from 21 million Microsoft Bing Copilot and public log datasets, which capture user-LLM interactions.
+            What does it mean to <i>collaborate</i> with LLM-powered Copilots? A common metaphor is to think of LLMs as “assistants” – users supply a prompt specifying their task, the LLM responds, and users leave with the response in hand. Instead, we shifted our metaphor to LLMs as “collaborators” and asked what it means to collaborate with an LLM. To explore this, we analyzed English multi-turn sessions from 21 million Microsoft Bing Copilot and public WildChat logs, which reflect real-world user–LLM interactions.
           </p>
         </div>
 
         <h2 class="title is-3">What we did</h2>
         <div class="content has-text-justified">
+          <p>
+            Recent papers have taken the “assistant” metaphor and examined the tasks users initiate with AI tools such as <a href="https://www.anthropic.com/research/clio">Claude</a>, <a href="https://arxiv.org/abs/2404.04268">Bing Copilot</a>, and <a href="https://arxiv.org/abs/2405.01470">WildChat</a> (e.g. coding, search, writing, etc). Instead, we analyze users' <i>follow-ups</i> after making a request to the LLM because they capture how users collaborate with the LLM. We ran our analysis only on writing tasks to keep the analysis manageable.
+          </p>
+
+          <p>
+            We asked two questions in our analysis: (Q1) What user behaviors emerge in user-LLM collaborations? (Q2) Do users collaborate differently based on their writing intent – for example, when composing an email versus writing a story?
+          </p>
+
+          <p>
+          We addressed the first question by using an GPT-4o classifier to differentiate between users’ follow-ups and their original requests (below example). Then we clustered follow-ups into a small set of clusters that represent <u>P</u>rototypical Human-<u>A</u>I Collabora<u>t</u>ion Be<u>h</u>aviors (PATHs). To answer our second question, we used another GPT-4o classifier to identify the writing intent behind each original request, and then ran a regression analysis to explore how these intents correlate with different PATHs. Our paper covers the classifiers and analysis in more detail!
+          </p>
           <!-- Analysis image -->
           <div class="columns is-centered">
             <div class="column">
               <div class="content has-text-centered">
-                <img src="static/images/analysis.png" alt="An overview of our analysis procedure used to answer the two research questions we explore." style="width: 50%;">
-                <figcaption style="color: #999; font-size: 0.9em; margin-top: 0.3em;">Overview of the analysis methods used to address our two research questions.</figcaption>
+                <img src="static/images/analysis.png" alt="Overview of the analysis methods used to address our two research questions." style="width: 85%;">
+                <figcaption style="color: #999; font-size: 0.9em; margin-top: 0.3em;">Overview of the analysis methods used to address our two research questions and an example differentiating the original requests from the follow-up.</figcaption>
               </div>
             </div>
           </div>
-          <p>
-            Recent papers have taken the “assistant” metaphor and examined the tasks users initiate with Copilots such as <a href="https://www.anthropic.com/research/clio">Claude</a>, <a href="https://arxiv.org/abs/2404.04268">Bing Copilot</a>, and <a href="https://arxiv.org/abs/2405.01470">WildChat</a> (e.g. coding, search, writing, etc). Instead, we analyze users' <i>follow-ups</i> after making an initial request because they capture how users collaborate with the LLM. We ran our analysis only on writing tasks to keep the analysis manageable.
-          </p>
-
-          <p>
-            We asked two questions in our analysis: (Q1) What user behaviors emerge in user-LLM collaborations? (Q2) Do users collaborate differently depending on their writing intent, e.g., differing in behavior while writing an email vs writing a story?
-          </p>
-
-          <p>
-          We addressed the first question by clustering users’ follow-ups and identified a small set of clusters that represent prototypical human-AI collaboration behaviors. We’ll refer to them as PATHs. Then, we ran a regression analysis between writing intents and PATHs to answer our second question.
-          </p>
         </div>
 
         <h2 class="title is-3">What we found</h2>
@@ -169,7 +169,7 @@
           </p>
 
           <p>
-            Most interestingly, we found correlations between specific writing intents and PATHs. For example, users frequently requested more responses when brainstorming. Similarly, they asked questions while writing technical or professional documents. In doing so, users combined tasks that researchers have traditionally treated as separate — search and writing. They also added large chunks of text to personalize generations, such as a speech or story they wanted creative control over. Our paper describes several such correlations and highlights under-explored research problems that warrant further investigation in future work.
+            Most interestingly, we found correlations between specific writing intents and PATHs (examples below). For example, users frequently requested more responses when brainstorming. Similarly, they asked questions while writing technical or professional documents. In doing so, users combined tasks that researchers have traditionally treated as separate — search and writing. They also added large chunks of text to personalize generations, such as a speech or story they wanted creative control over. Our paper describes several such correlations and highlights under-explored research problems that warrant further investigation in future work.
           </p>
         </div>
         <!-- Examples image -->
@@ -214,10 +214,13 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-        @article{mysore2025paths,
+    @misc{mysore2025paths,
           title={Prototypical Human-AI Collaboration Behaviors from LLM-Assisted Writing in the Wild}, 
           author={Sheshera Mysore and Debarati Das and Hancheng Cao and Bahareh Sarrafzadeh},
           year={2025},
+          eprint={2505.16023},
+          archivePrefix={arXiv},
+          primaryClass={cs.CL},
           url={https://arxiv.org/abs/2505.16023}
         }
     </code></pre>
